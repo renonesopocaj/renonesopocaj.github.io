@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "welcome-to-the-blog",
+    "title": "Welcome to the Blog",
+    "date": "2026-08-07",
+    "excerpt": "TODO: a one- or two-sentence teaser shown on the blog index card. This example post also shows how images, video, and LaTeX math render.",
+    "tags": ["meta"],
+    "published": false
+  }
+]

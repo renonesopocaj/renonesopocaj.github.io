@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="placeholderTitle">
+  <title id="placeholderTitle">Placeholder image</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#af67ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#5ff26b" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="799" height="449" fill="none" stroke="#af67ff" stroke-width="1" stroke-dasharray="8 6"/>
+  <text x="400" y="235" font-family="monospace" font-size="28" fill="#7b38cb" text-anchor="middle">TODO: replace this image</text>
+</svg>
