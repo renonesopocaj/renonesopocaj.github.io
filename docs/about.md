@@ -17,7 +17,7 @@
 
 ## About
 
-I’m Jacopo Senoner, an MSc Computer Science student at EPFL interested in Machine Learning/AI and
+I am Jacopo Senoner, an MSc Computer Science student at EPFL interested in Machine Learning/AI and
 Scientific Computing. 
 I did my Bachelor's in Computer Engineering at Politecnico di Milano.
 

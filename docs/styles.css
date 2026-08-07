@@ -19,20 +19,22 @@ html {
     /* Light theme colors (inspired by astro-theme-cactus) */
     --color-global-bg: oklch(98.48% 0 0);
     --color-global-text: oklch(26.99% 0.0096 235.05);
-    --color-link: oklch(55.44% 0.0431 185.69);
     --color-accent: #af67ff;
     --color-accent-2: oklch(18.15% 0 0);
     --color-quote: #af67ff;
     --color-border: #e5e7eb;
     --color-card-bg: rgba(255, 255, 255, 0.8);
     --color-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Fixed accent for the scrollbar, nav links, and markdown links; same value in light and dark */
+    --color-accent-red: #FF4D00;
+    --color-link: var(--color-accent-red);
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
     --color-global-bg: oklch(23.64% 0.0045 248);
     --color-global-text: oklch(83.54% 0 264);
-    --color-link: oklch(70.44% 0.1133 349);
     --color-accent: #5ff26b;
     --color-accent-2: oklch(94.66% 0 0);
     --color-quote: oklch(94.8% 0.106 136.49);
@@ -303,8 +305,8 @@ body {
 
 .mobile-nav-menu > a {
     padding: 0 1rem;
-    border-left: 1px solid var(--color-accent);
-    color: var(--color-accent);
+    border-left: 1px solid var(--color-accent-red);
+    color: var(--color-accent-red);
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -353,19 +355,19 @@ body {
         transition: opacity 0.2s ease !important;
         text-align: center !important;
         min-width: 200px !important;
-        background-color: color-mix(in srgb, var(--color-accent) 10%, transparent) !important;
-        border: 1px solid var(--color-accent) !important;
-        color: var(--color-accent) !important;
+        background-color: color-mix(in srgb, var(--color-accent-red) 10%, transparent) !important;
+        border: 1px solid var(--color-accent-red) !important;
+        color: var(--color-accent-red) !important;
         text-decoration: none !important;
         display: block !important;
         margin: 0 !important;
     }
 
     .mobile-nav-menu > a:hover {
-        background-color: var(--color-accent) !important;
+        background-color: var(--color-accent-red) !important;
         color: var(--color-global-bg) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px color-mix(in srgb, var(--color-accent) 30%, transparent) !important;
+        box-shadow: 0 4px 12px color-mix(in srgb, var(--color-accent-red) 30%, transparent) !important;
         text-decoration: none !important;
     }
 }
@@ -849,22 +851,22 @@ button:focus-visible {
 /* Active navigation link styling */
 @media (max-width: 640px) {
     .mobile-nav-menu a.active {
-        background-color: var(--color-accent) !important;
+        background-color: var(--color-accent-red) !important;
         color: var(--color-global-bg) !important;
-        border-color: var(--color-accent) !important;
+        border-color: var(--color-accent-red) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px color-mix(in srgb, var(--color-accent) 30%, transparent) !important;
+        box-shadow: 0 4px 12px color-mix(in srgb, var(--color-accent-red) 30%, transparent) !important;
     }
 }
 
 @media (min-width: 640px) {
     .mobile-nav-menu a.active {
         background-color: transparent !important;
-        color: var(--color-accent) !important;
+        color: var(--color-accent-red) !important;
         text-decoration: underline !important;
         text-underline-offset: 4px !important;
         /* Keep vertical dividers visible even when active */
-        border-left: 1px solid var(--color-accent) !important;
+        border-left: 1px solid var(--color-accent-red) !important;
     }
     .mobile-nav-menu a.active:first-child {
         border-left: none !important;
@@ -922,7 +924,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-accent);
+    background: var(--color-accent-red);
     border-radius: 4px;
 }
 
