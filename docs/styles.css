@@ -884,7 +884,7 @@ html {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    color: var(--color-accent);
+    color: var(--color-link);
     font-style: italic;
 }
 
@@ -893,7 +893,7 @@ html {
     width: 20px;
     height: 20px;
     margin-left: 10px;
-    border: 2px solid var(--color-accent);
+    border: 2px solid var(--color-link);
     border-top: 2px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
