@@ -19,29 +19,28 @@
 
 I am Jacopo Senoner, an MSc Computer Science student at EPFL interested in Machine Learning/AI and
 Scientific Computing. 
-I did my Bachelor's in Computer Engineering at Politecnico di Milano.
+I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano.
 
 #### Academic projects
 
-I have done several projects in scientific computing:
+I have completed several projects in scientific computing:
 - [Physics-Informed ML, Graph Neural Networks (GNNs), Inductive biases](https://github.com/renonesopocaj): I have 
 studied inductive biases in GNNs for learning the solution operator of a PDE with applications in structural mechanics.
 - [Numerical Analysis for the $p$-Stokes problem](https://github.com/renonesopocaj): studying the $p$-Stokes problem,
 under supervision of prof. M. Botti at MOX Lab, PoliMi.
 - [Markov Chain Monte Carlo](https://github.com/renonesopocaj/3d-queens-mcmc) for the $N^2$-queens problem.
 
-I have also done projects in ML:
+I have also worked on several machine learning projects:
 - [Decentralized Learning](https://github.com/renonesopocaj/bandit-decentralized-learning): multi-armed bandit algorithms for adaptive neighbour sampling in decentralized 
 learning. Focused on their ability to recover latent client clusters under data heterogeneity.
 Evaluated on FEMNIST (Federated MNIST) classification.
-- [Adversarial Attacks Against LLM Routers](https://github.com/renonesopocaj): adversarial attacks 
-against LLM routers.
+- [Adversarial Attacks Against LLM Routers](https://github.com/renonesopocaj).
 
 #### Music
 
 During my final years of high school and throughout my undergrad, I spent a lot of my free time playing piano and drums,
 and making music.
-I was a composer ([here my spotify profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ))
+I was a composer ([here’s my Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ))
 under contract with Alieno Label, distributed by ADA Music Italy, and I also had an experience as a composer at 
 [FOMO Studios in London](https://www.fomo.london/clients), where I collaborated with established musicians and producers.
 
