@@ -50,6 +50,3 @@ the drums, and learning to make music. Here’s my ([Spotify artist profile](htt
 - Helped sound and lighting operations at Milano Classica concert hall.
 - I also spent some time composing at [FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and 
 producers.
-
-Alongside studio work, I performed live as a DJ at several clubs in Milan and gained hands-on experience with sound and
-lighting operations, including at the [Milano Classica concert hall](https://www.milanoclassica.it/).
