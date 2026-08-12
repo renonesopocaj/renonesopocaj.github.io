@@ -17,37 +17,36 @@
 
 ## About
 
-I am Jacopo Senoner, a second-year MSc Computer Science student at EPFL interested in Machine Learning/AI and
-Scientific Computing.
+I'm a second-year MSc Computer Science student at EPFL interested in machine learning/AI and
+scientific computing.
 I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano.
 
 #### Current work
 
 - **Numerical Analysis for the $p$-Stokes problem**: I am currently studying the $p$-Stokes problem,
-under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/). Work presented at [SIAM Chapters
+under supervision of Prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/). This work was presented at [SIAM Chapters
 Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/). A preprint will soon be available.
 
 #### Research experience
 
-- **Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases**: I have 
-studied inductive biases in GNNs for learning the solution operator of a PDE with applications in structural mechanics. 
-Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), not publicly available yet.
+- **Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases**: I studied inductive biases in GNNs for 
+learning the solution operator of a PDE with applications in structural mechanics. 
+Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), yet not publicly available.
 
-#### Research-oriented academic projects
+#### Selected academic projects
 
 - [Markov Chain Monte Carlo](https://github.com/renonesopocaj/3d-queens-mcmc) for the $N^2$-queens problem.
-- [Decentralized Learning](https://github.com/renonesopocaj/bandit-decentralized-learning): studied multi-armed bandit algorithms for adaptive neighbour sampling in decentralized 
-learning. Focused on their ability to recover latent client clusters under data heterogeneity. Evaluated on FEMNIST 
-(Federated MNIST) classification.
+- [Bandit algorithms for neighbour sampling in decentralized learning](https://github.com/renonesopocaj/bandit-decentralized-learning): studied multi-armed bandit algorithms for 
+adaptive neighbour sampling in decentralized learning. Focused on their ability to recover latent client clusters under 
+data heterogeneity. Evaluated on FEMNIST (Federated MNIST) classification.
 - **Adversarial Attacks Against LLM Routers**, not publicly available yet.
 
 #### Music
 
 During my final years of high school and throughout my undergrad, I spent my free time learning to play the piano,
-the drums, and learning to make music. Here’s my [Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ). Some of my experiences are listed 
-below:
-- Composer under contract with Alieno Label, distributed by ADA Music Italy (Warner Music Group), 2021-2024.
+the drums, and to make music. Here’s my [Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ). A few highlights:
+- Worked as a composer under contract with Alieno Label, distributed by ADA Music Italy (Warner Music Group), 2021-2024.
 - Performed live as a DJ at various clubs in Milan: Legend, Inside, Apophis, etc.
-- Helped sound and lighting operations at [Milano Classica](https://www.milanoclassica.it/).
+- Assisted with sound and lighting operations at [Milano Classica](https://www.milanoclassica.it/).
 - I also spent some time composing at [FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and 
 producers.
