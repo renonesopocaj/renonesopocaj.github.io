@@ -43,12 +43,13 @@ learning. Focused on their ability to recover latent client clusters under data 
 
 #### Music
 
-During my final years of high school and throughout my undergrad, I spent a lot of my free time playing piano, drums,
-and making music.
-I was a composer 
-([here’s my Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ))
-under contract with Alieno Label, distributed by ADA Music Italy. I also spent some time composing at 
-[FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and producers. 
+During my final years of high school and throughout my undergrad, I spent my free time learning to play the piano,
+the drums, and learning to make music. Here’s my ([Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ)).
+- Composer under contract with Alieno Label, distributed by ADA Music Italy (Warner Music Group), 2021-2024.
+- Performed live as a DJ at Legend Club (Milan), Inside Club (Milan), Apophis Club (Milan), etc.
+- Helped sound and lighting operations at Milano Classica concert hall.
+- I also spent some time composing at [FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and 
+producers.
 
 Alongside studio work, I performed live as a DJ at several clubs in Milan and gained hands-on experience with sound and
 lighting operations, including at the [Milano Classica concert hall](https://www.milanoclassica.it/).
