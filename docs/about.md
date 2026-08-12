@@ -17,7 +17,7 @@
 
 ## About
 
-I am Jacopo Senoner, a second-yeaer MSc Computer Science student at EPFL interested in Machine Learning/AI and
+I am Jacopo Senoner, a second-year MSc Computer Science student at EPFL interested in Machine Learning/AI and
 Scientific Computing.
 I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano.
 
@@ -44,9 +44,10 @@ learning. Focused on their ability to recover latent client clusters under data 
 #### Music
 
 During my final years of high school and throughout my undergrad, I spent my free time learning to play the piano,
-the drums, and learning to make music. Here’s my ([Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ)).
+the drums, and learning to make music. Here’s my [Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ). Some of my experiences are listed 
+below:
 - Composer under contract with Alieno Label, distributed by ADA Music Italy (Warner Music Group), 2021-2024.
-- Performed live as a DJ at Legend Club (Milan), Inside Club (Milan), Apophis Club (Milan), etc.
-- Helped sound and lighting operations at [Milano Classica concert hall](https://www.milanoclassica.it/).
+- Performed live as a DJ at various clubs in Milan: Legend, Inside, Apophis, etc.
+- Helped sound and lighting operations at [Milano Classica](https://www.milanoclassica.it/).
 - I also spent some time composing at [FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and 
 producers.
