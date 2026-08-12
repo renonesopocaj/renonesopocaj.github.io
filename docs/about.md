@@ -24,7 +24,8 @@ I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano
 #### Current work
 
 - **Numerical Analysis for the $p$-Stokes problem**: I am currently studying the $p$-Stokes problem,
-under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/). A preprint will soon be available.
+under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/). Work presented at [SIAM Chapters
+Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/). A preprint will soon be available.
 
 #### Research experience
 
