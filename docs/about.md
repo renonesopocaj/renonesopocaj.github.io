@@ -42,16 +42,12 @@ Evaluated on FEMNIST (Federated MNIST) classification.
 
 #### Music
 
-During my final years of high school and throughout my undergrad, I spent a lot of my free time playing piano and drums,
+During my final years of high school and throughout my undergrad, I spent a lot of my free time playing piano, drums,
 and making music.
-I was a composer ([here’s my Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ))
-under contract with Alieno Label, distributed by ADA Music Italy, and I also had an experience as a composer at 
-[FOMO Studios in London](https://www.fomo.london/clients), where I collaborated with established musicians and producers.
+I was a composer 
+([here’s my Spotify artist profile](https://open.spotify.com/artist/6BF3u0mCZazib7Qt0V9SUQ?si=uzJEpe06Rg-hrR4Z60v6KQ))
+under contract with Alieno Label, distributed by ADA Music Italy. I also spent some time composing at 
+[FOMO Studios in London](https://www.fomo.london/clients), collaborating with established musicians and producers. 
 
 Alongside studio work, I performed live as a DJ at several clubs in Milan and gained hands-on experience with sound and
-lighting operations, including at the Milano Classica concert hall.
-
-Performing live helped me become comfortable speaking and working in front of an audience, dealing with pressure, 
-and adapting quickly when things did not go as planned. 
-Producing and mixing music gave me an intuitive understanding of digital audio processing:
-filtering, equalization, compression, frequency-domain reasoning, sampling, and the practical behavior of audio signals.
+lighting operations, including at the [Milano Classica concert hall](https://www.milanoclassica.it/).
