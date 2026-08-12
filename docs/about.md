@@ -17,18 +17,20 @@
 
 ## About
 
-I am Jacopo Senoner, an MSc Computer Science student at EPFL interested in Machine Learning/AI and
-Scientific Computing. 
+I am Jacopo Senoner, a second-yeaer MSc Computer Science student at EPFL interested in Machine Learning/AI and
+Scientific Computing.
 I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano.
+
+#### Current work
+
+- **Numerical Analysis for the $p$-Stokes problem**: I am currently studying the $p$-Stokes problem,
+under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/). A preprint will soon be available.
 
 #### Research experience
 
-I have completed two research projects in scientific computing:
-- [Physics-Informed ML, Graph Neural Networks (GNNs), Inductive biases](https://github.com/renonesopocaj): I have 
+- **Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases**: I have 
 studied inductive biases in GNNs for learning the solution operator of a PDE with applications in structural mechanics. 
-Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/).
-- [Numerical Analysis for the $p$-Stokes problem](https://github.com/renonesopocaj): studying the $p$-Stokes problem,
-under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/).
+Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), not publicly available yet.
 
 #### Research-oriented academic projects
 
@@ -36,7 +38,7 @@ under supervision of prof. M. Botti at [MOX Lab, PoliMi](https://mox.polimi.it/)
 - [Decentralized Learning](https://github.com/renonesopocaj/bandit-decentralized-learning): studied multi-armed bandit algorithms for adaptive neighbour sampling in decentralized 
 learning. Focused on their ability to recover latent client clusters under data heterogeneity. Evaluated on FEMNIST 
 (Federated MNIST) classification.
-- [Adversarial Attacks Against LLM Routers](https://github.com/renonesopocaj).
+- **Adversarial Attacks Against LLM Routers**, not publicly available yet.
 
 #### Music
 
