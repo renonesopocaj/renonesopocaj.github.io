@@ -48,7 +48,7 @@ data heterogeneity. Evaluated on FEMNIST (Federated MNIST) classification.
 attack against LLM routers by using a paraphraser Seq2Seq model. The goal is to rewrite a query so it remains
 semantically equivalent, while increasing the probability that a router sends it to a stronger and more expensive model 
 (cost-escalation attack). 
-- [Edge AI for Obstructive Sleep Apnea Detection Repo](https://github.com/renonesopocaj/spo2t): Deployed an MLP to 
+- [Edge AI for Obstructive Sleep Apnea Detection Repo](https://github.com/renonesopocaj/spo2t): deployed an MLP to 
 detect sleep apnea from SpO2 data on an Arduino Nicla with MAX30102 pulse oximeter, converting the ONNX model via 
 Zant SDK into a precompiled embedded runtime achieving 10 ms inference. Project developed in one day for the Bosch 
 x NecstLab Hackathon, won the "Best idea prize".
@@ -56,7 +56,7 @@ x NecstLab Hackathon, won the "Best idea prize".
 #### Other projects
 
 - [Markov Chain Monte Carlo](https://github.com/renonesopocaj/3d-queens-mcmc) for the $N^2$-queens problem.
-- [FPGA Digital Filter in VHDL](https://github.com/renonesopocaj/vhdl-filter-fpga): A streaming digital filter in VHDL 
+- [FPGA Digital Filter in VHDL](https://github.com/renonesopocaj/vhdl-filter-fpga): a streaming digital filter in VHDL 
 controlled by a FSM and interfacing with a single-port memory. Conducted design, synthesis, simulation, and created 
 testbenches. Achieved 6.43 ns critical path. Synthesized and verified the design in Xilinx Vivado: 738 LUTs and 163 
 registers with no DSP/RAM blocks, meeting a 20 ns clock constraint with 13.521 ns slack and passing reset, saturation, 
