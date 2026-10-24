@@ -47,11 +47,15 @@ Because it's one shared engine, **images, video embeds, and LaTeX work the same 
 
 About, Projects, Blog, and Music are linked from every page's header. The three Markdown pages use matching `about-content`, `projects-content`, and `music-content` containers, and `MarkdownLoader` only loads content for containers present on the current page. Keep these headers in sync when updating navigation.
 
+Navigation, scrolling, theme switches, menus, and hover states update immediately. Only the content-loading spinner animates.
+
 ## Music background photos
 
-Music uses a fixed 2×2 photo background with proportional cropping and a bottom-anchored crowd photo. Its `srcset` entries load compressed WebP copies from `docs/assets/music_pictures/optimized/`; `sizes` accounts for both the width and height needed by each crop. Original photos stay in `docs/assets/music_pictures/`. After replacing an original, run `node scripts/optimize-music-images.mjs` (requires `cwebp`, available in Homebrew's `webp` package) and keep `music.html`'s dimensions and source widths in sync. The generator preserves ICC color profiles and keeps Studio at its native maximum width.
+Music uses a fixed 2×2 photo background with proportional cropping and a bottom-anchored crowd photo. Its `srcset` entries load compressed WebP copies from `docs/assets/music_pictures/optimized/`; `sizes` accounts for both the width and height needed by each crop. Original photos stay in `docs/assets/music_pictures/`. After replacing an original, run `node scripts/optimize-music-images.mjs` (requires `cwebp`, available in Homebrew's `webp` package) and keep `music.html`'s dimensions and source widths in sync. The generator preserves ICC color profiles, keeps Studio at its native maximum width, and updates the four inline previews in `music.html`.
 
-Measured with a fresh browser cache at desktop 1280×900 (1×), mobile 390×844 (2×), and desktop 1920×1080 (1×): responsive WebP reduces the four-photo download from 23,611,444 bytes to 375,914–509,958 bytes (about 98% smaller). Keep these responsive copies rather than serving the originals as backgrounds. Music's small text stroke increase stays scoped to `#music-content`.
+Measured with a fresh browser cache at desktop 1280×900 (1×), mobile 390×844 (2×), and desktop 1920×1080 (1×): responsive WebP reduces the full-resolution photo files from 23,611,444 bytes to 375,914–509,958 bytes (about 98% smaller). Keep these responsive copies rather than serving the originals as backgrounds. Music's small text stroke increase stays scoped to `#music-content`.
+
+The inline previews contain about 12 KiB of image data (about 16 KiB after base64 encoding). They show all four photos immediately while a small inline script waits for all full-resolution photos to decode, then reveals them together without animation. A failed full-resolution photo is logged and retains its preview. The shared script warms Music's responsive image candidates on other pages during idle time or when a Music link receives pointer, touch, or keyboard focus; automatic warming respects data-saver preferences. It reads the image attributes from `music.html` and reuses the browser's normal HTTP cache. In the local 10 Mb/s, 80 ms latency cache test, navigation after warming on About downloaded zero image bytes; the previous navigation downloaded 377,114 image bytes.
 
 ## Project index and individual pages
 
@@ -65,7 +69,7 @@ Bandit, Adversarial Paraphraser, MCMC, and FPGA include their complete original 
 
 Each project's `report/` folder contains its original figures, scoped source styling, and `source.json` with the authoritative GitHub PDF commit, source hashes, figure inventory, and imported-text hash. Original PNG/JPEG files retain their bytes; the two Adversarial diagrams are vector crops of the original PDF. The MCMC ZIP contains an earlier draft, so its complete final report is recovered from the pinned GitHub PDF. The Bandit Conclusion follows the published PDF rather than the newer draft paragraph in the ZIP.
 
-`docs/report.css` provides the shared responsive report layout. Each report page loads it after `report/source.css`; these styles stay scoped to `.report`. The text hover effect skips MathML and KaTeX so mathematical markup remains intact. When replacing a report, compare its full text and every figure with the authoritative PDF before updating its content hashes.
+`docs/report.css` provides the shared responsive report layout. Each report page loads it after `report/source.css`; these styles stay scoped to `.report`. Images preserve their proportions within the available width and a 300 px height limit, with a 600 px limit for VHDL. Formula scrollbars use an 8 px horizontal height in the shared stylesheet. When replacing a report, compare its full text and every figure with the authoritative PDF before updating its content hashes.
 
 ## Adding a blog post
 

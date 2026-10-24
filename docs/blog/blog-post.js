@@ -66,9 +66,6 @@ async function loadPost() {
         const markdown = await postResponse.text();
         const html = await renderMarkdown(markdown);
         contentElement.innerHTML = html;
-        if (typeof window.applyBHoverEffect === 'function') {
-            window.applyBHoverEffect(contentElement);
-        }
     } catch (error) {
         console.error(`Error loading post "${post.slug}":`, error);
         showError('Sorry, unable to load this post right now.');

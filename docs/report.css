@@ -53,6 +53,10 @@
     background: white;
 }
 
+.report-vhdl-filter-fpga figure img {
+    max-height: 600px;
+}
+
 .report figure.figure {
     text-align: left;
 }

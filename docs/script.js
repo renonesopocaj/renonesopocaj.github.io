@@ -169,10 +169,10 @@ class MobileNavigation {
     }
 }
 
-// Smooth scrolling for in-page navigation links (e.g. "#about"). Links to other
+// Immediate scrolling for in-page navigation links (e.g. "#about"). Links to other
 // pages such as "../index.html#about" or "blog/index.html" do not start with
 // "#" and are left to normal browser navigation.
-class SmoothScroll {
+class AnchorNavigation {
     constructor() {
         this.init();
     }
@@ -212,7 +212,7 @@ class SmoothScroll {
 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: 'auto'
                 });
 
                 // Update URL without triggering scroll
@@ -350,10 +350,6 @@ class MarkdownLoader {
                     const markdown = await response.text();
                     const html = await renderMarkdown(markdown);
                     contentElement.innerHTML = html;
-                    // Apply hover effect to new content
-                    if (typeof window.applyBHoverEffect === 'function') {
-                        window.applyBHoverEffect(contentElement);
-                    }
                     console.log(`Successfully loaded ${section} from: ${fullPath}`);
                     return; // Success, exit early
                 } else {
@@ -381,141 +377,84 @@ class MarkdownLoader {
         errorBox.appendChild(p1);
         errorBox.appendChild(p2);
         contentElement.appendChild(errorBox);
-        // Apply hover effect to error content
-        if (typeof window.applyBHoverEffect === 'function') {
-            window.applyBHoverEffect(contentElement);
-        }
     }
 }
 
-// Hover effect for letter 'b' and 'B'
-(function() {
-    function applyBHoverEffect(root) {
-        const targetRoot = root || document.body;
-        if (!targetRoot) return;
+// Warm the responsive Music photos during idle time or when its link is targeted.
+// music.html remains the source of truth for image sizes and paths.
+function prefetchMusicBackground() {
+    if (document.body.classList.contains('music-page')) return;
 
-        const walker = document.createTreeWalker(
-            targetRoot,
-            NodeFilter.SHOW_TEXT,
-            {
-                acceptNode(node) {
-                    const value = node.nodeValue;
-                    if (!value || (value.indexOf('b') === -1 && value.indexOf('B') === -1)) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    const parent = node.parentNode;
-                    if (!parent) return NodeFilter.FILTER_REJECT;
-                    const tag = parent.nodeName;
-                    if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT') {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    // MathML and KaTeX require their generated markup to stay intact.
-                    if (parent.closest('math, .katex')) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    if (parent.classList && parent.classList.contains('hover-b')) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    return NodeFilter.FILTER_ACCEPT;
-                }
-            }
-        );
+    const musicURL = new URL('./music.html', import.meta.url);
+    let warmup = null;
+    let images = [];
 
-        const nodesToProcess = [];
-        let current;
-        while ((current = walker.nextNode())) {
-            nodesToProcess.push(current);
-        }
+    function warmImages() {
+        if (warmup) return warmup;
+        warmup = (async () => {
+            const response = await fetch(musicURL);
+            if (!response.ok) throw new Error(`Music prefetch HTTP ${response.status}`);
 
-        nodesToProcess.forEach((textNode) => {
-            const text = textNode.nodeValue;
-            const fragment = document.createDocumentFragment();
-            let buffer = '';
+            const template = document.createElement('template');
+            template.innerHTML = await response.text();
+            const sources = [...template.content.querySelectorAll('.music-background img')];
+            if (sources.length !== 4) throw new Error('Music prefetch requires four background photos.');
 
-            for (let i = 0; i < text.length; i++) {
-                const ch = text[i];
-                if (ch === 'b' || ch === 'B') {
-                    if (buffer) {
-                        fragment.appendChild(document.createTextNode(buffer));
-                        buffer = '';
-                    }
-                    const span = document.createElement('span');
-                    span.className = 'hover-b';
-                    span.textContent = ch;
-                    fragment.appendChild(span);
-                } else {
-                    buffer += ch;
-                }
-            }
-
-            if (buffer) {
-                fragment.appendChild(document.createTextNode(buffer));
-            }
-
-            if (textNode.parentNode) {
-                textNode.parentNode.replaceChild(fragment, textNode);
-            }
+            images = sources.map(source => {
+                const image = new Image();
+                image.fetchPriority = 'low';
+                image.decoding = 'async';
+                image.sizes = source.sizes;
+                image.srcset = source.getAttribute('srcset').split(',').map(candidate => {
+                    const [url, width] = candidate.trim().split(/\s+/);
+                    return `${new URL(url, musicURL).href} ${width}`;
+                }).join(', ');
+                image.src = new URL(source.getAttribute('src'), musicURL).href;
+                return image;
+            });
+            await Promise.all(images.map(image => image.decode()));
+            return true;
+        })().catch(error => {
+            console.warn('Unable to prefetch Music photos:', error);
+            warmup = null;
+            return false;
         });
+        return warmup;
     }
 
-    window.applyBHoverEffect = applyBHoverEffect;
-})();
-
-// Bee spawning when clicking on a 'b'/'B'
-(function() {
-    function spawnBeeFromElement(el) {
-        const rect = el.getBoundingClientRect();
-        const startX = rect.left + rect.width / 2;
-        const startY = rect.top + rect.height / 2;
-
-        const bee = document.createElement('div');
-        bee.className = 'flying-bee';
-        bee.textContent = '🐝';
-        bee.style.left = startX + 'px';
-        bee.style.top = startY + 'px';
-
-        // Random off-screen direction
-        const angle = Math.random() * Math.PI * 2;
-        const distance = Math.max(window.innerWidth, window.innerHeight) + 200;
-        const dx = Math.cos(angle) * distance;
-        const dy = Math.sin(angle) * distance;
-        bee.style.setProperty('--dx', dx + 'px');
-        bee.style.setProperty('--dy', dy + 'px');
-
-        document.body.appendChild(bee);
-
-        const cleanup = () => {
-            if (bee && bee.parentNode) bee.parentNode.removeChild(bee);
-        };
-        bee.addEventListener('animationend', cleanup, { once: true });
-        setTimeout(cleanup, 4000);
-    }
-
-    document.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target && target.classList && target.classList.contains('hover-b')) {
-            spawnBeeFromElement(target);
-        }
+    document.querySelectorAll('a[href]').forEach(link => {
+        if (link.href !== musicURL.href) return;
+        link.addEventListener('pointerenter', warmImages, { once: true });
+        link.addEventListener('focus', warmImages, { once: true });
+        link.addEventListener('touchstart', warmImages, { once: true, passive: true });
     });
-})();
+
+    // Avoid speculative transfers when the visitor requests reduced data usage.
+    if (navigator.connection?.saveData) return;
+    const enqueue = () => {
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(warmImages, { timeout: 1500 });
+        } else {
+            window.setTimeout(warmImages, 300);
+        }
+    };
+    if (document.readyState === 'complete') enqueue();
+    else window.addEventListener('load', enqueue, { once: true });
+}
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     new ThemeManager();
     new MobileNavigation();
-    new SmoothScroll();
+    new AnchorNavigation();
 
-    // Make NavigationHighlight available globally for smooth scroll integration
+    // Make NavigationHighlight available globally for anchor navigation.
     window.navigationHighlightInstance = new NavigationHighlight();
 
     new LazyImageLoader();
     new MarkdownLoader();
-
-    // Apply hover effect to all 'b' letters on initial content
-    if (typeof window.applyBHoverEffect === 'function') {
-        window.applyBHoverEffect(document.body);
-    }
+    prefetchMusicBackground();
 
     // Add loading state management
     document.body.classList.add('loaded');
@@ -523,15 +462,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Console message for developers
     console.log('🌵 Portfolio site loaded successfully!');
     console.log('Built with inspiration from astro-theme-cactus');
-});
-
-// Handle page visibility changes (pause animations when not visible)
-document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'hidden') {
-        document.body.classList.add('paused');
-    } else {
-        document.body.classList.remove('paused');
-    }
 });
 
 // Add keyboard navigation support
@@ -543,21 +473,5 @@ document.addEventListener('keydown', (e) => {
         if (themeToggle) {
             themeToggle.click();
         }
-    }
-});
-
-// Add reduced motion support
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-if (prefersReducedMotion.matches) {
-    document.documentElement.style.setProperty('scroll-behavior', 'auto');
-}
-
-// Listen for changes in motion preference
-prefersReducedMotion.addEventListener('change', () => {
-    if (prefersReducedMotion.matches) {
-        document.documentElement.style.setProperty('scroll-behavior', 'auto');
-    } else {
-        document.documentElement.style.setProperty('scroll-behavior', 'smooth');
     }
 });
