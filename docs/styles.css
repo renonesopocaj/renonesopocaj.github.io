@@ -577,12 +577,17 @@ body {
     opacity: 0.22;
 }
 
+.music-page .music-background img {
+    /* Enabled responsive sources select and preload images, but never paint. */
+    display: none;
+}
+
 .music-page .music-photo {
     min-width: 0;
     min-height: 0;
     overflow: hidden;
-    /* Inline low-resolution photos remain the only background source. */
-    background-image: var(--music-preview);
+    /* The optional full layer stays empty while high-resolution loading is disabled. */
+    background-image: var(--music-full, none), var(--music-preview);
     background-size: max(50cqw, calc(50cqh * var(--music-ratio))) max(50cqh, calc(50cqw / var(--music-ratio)));
     background-position: center;
     background-repeat: no-repeat;

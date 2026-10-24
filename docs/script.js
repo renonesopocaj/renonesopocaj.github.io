@@ -3,6 +3,9 @@
 // no-build static tree - see README.md "How the markdown pipeline works".
 let mdEnginePromise = null;
 
+// Temporarily disabled: retain responsive photo upgrades and cross-page prefetching.
+const MUSIC_HIGH_RESOLUTION_ENABLED = false;
+
 function loadMarkdownEngine() {
     if (!mdEnginePromise) {
         mdEnginePromise = (async () => {
@@ -380,6 +383,116 @@ class MarkdownLoader {
     }
 }
 
+// Inert templates preserve responsive sources without starting disabled downloads.
+function getMusicPhotoSources(root) {
+    const templates = [...root.querySelectorAll('.music-photo template')];
+    if (templates.length !== 4) throw new Error('Music requires four background photo sources.');
+    return templates.map(template => {
+        const source = template.content.querySelector('img');
+        if (!source) throw new Error('Music background template is missing its photo.');
+        return { tile: template.parentElement, source };
+    });
+}
+
+// Previews remain painted underneath full photos on the same fixed tiles.
+// Publishing background layers changes no element visibility or dimensions.
+function upgradeMusicBackground(background) {
+    const images = getMusicPhotoSources(background).map(({ tile, source }) => {
+        const image = source.cloneNode(true);
+        tile.appendChild(image);
+        return image;
+    });
+    let generation = 0;
+    background.classList.add('is-loading');
+
+    async function publishPhotos() {
+        const currentGeneration = ++generation;
+        const results = await Promise.allSettled(images.map(image => image.decode()));
+        if (currentGeneration !== generation) return;
+
+        requestAnimationFrame(() => {
+            if (currentGeneration !== generation) return;
+            results.forEach((result, index) => {
+                const image = images[index];
+                if (result.status === 'rejected') {
+                    console.error('Unable to decode Music photo:', image.currentSrc, result.reason);
+                    return;
+                }
+                image.parentElement.style.setProperty('--music-full', `url("${image.currentSrc}")`);
+            });
+            background.classList.remove('is-loading');
+        });
+    }
+
+    // A viewport change can select another srcset candidate after navigation.
+    images.forEach(image => image.addEventListener('load', publishPhotos));
+    publishPhotos();
+}
+
+// Warm the responsive Music photos during idle time or when its link is targeted.
+// music.html remains the source of truth for image sizes and paths.
+function prefetchMusicBackground() {
+    const musicURL = new URL('./music.html', import.meta.url);
+    let warmup = null;
+    let images = [];
+
+    function warmImages() {
+        if (warmup) return warmup;
+        warmup = (async () => {
+            const response = await fetch(musicURL);
+            if (!response.ok) throw new Error(`Music prefetch HTTP ${response.status}`);
+
+            const template = document.createElement('template');
+            template.innerHTML = await response.text();
+            images = getMusicPhotoSources(template.content).map(({ source }) => {
+                const image = new Image();
+                image.fetchPriority = 'low';
+                image.decoding = 'async';
+                image.sizes = source.sizes;
+                image.srcset = source.getAttribute('srcset').split(',').map(candidate => {
+                    const [url, width] = candidate.trim().split(/\s+/);
+                    return `${new URL(url, musicURL).href} ${width}`;
+                }).join(', ');
+                image.src = new URL(source.getAttribute('src'), musicURL).href;
+                return image;
+            });
+            await Promise.all(images.map(image => image.decode()));
+            return true;
+        })().catch(error => {
+            console.warn('Unable to prefetch Music photos:', error);
+            warmup = null;
+            return false;
+        });
+        return warmup;
+    }
+
+    document.querySelectorAll('a[href]').forEach(link => {
+        if (link.href !== musicURL.href) return;
+        link.addEventListener('pointerenter', warmImages, { once: true });
+        link.addEventListener('focus', warmImages, { once: true });
+        link.addEventListener('touchstart', warmImages, { once: true, passive: true });
+    });
+
+    // Avoid speculative transfers when the visitor requests reduced data usage.
+    if (navigator.connection?.saveData) return;
+    const enqueue = () => {
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(warmImages, { timeout: 1500 });
+        } else {
+            window.setTimeout(warmImages, 300);
+        }
+    };
+    if (document.readyState === 'complete') enqueue();
+    else window.addEventListener('load', enqueue, { once: true });
+}
+
+function initializeMusicBackground() {
+    if (!MUSIC_HIGH_RESOLUTION_ENABLED) return;
+    const background = document.querySelector('.music-background');
+    if (background) upgradeMusicBackground(background);
+    else prefetchMusicBackground();
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -392,6 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new LazyImageLoader();
     new MarkdownLoader();
+    initializeMusicBackground();
 
     // Add loading state management
     document.body.classList.add('loaded');

@@ -51,9 +51,11 @@ Navigation, scrolling, theme switches, menus, and hover states update immediatel
 
 ## Music background photos
 
-Music uses a fixed 2×2 photo background with proportional cropping and a bottom-anchored crowd photo. The four permanent backgrounds are the 160px-wide WebPs embedded directly in `music.html`, totaling about 12 KiB of image data (about 16 KiB after base64 encoding). They stay at this resolution throughout the visit: there are no higher-resolution downloads, prefetching, or image replacements. Resizing the viewport only adjusts their crops. Music's small text stroke increase stays scoped to `#music-content`.
+Music uses a fixed 2×2 photo background with proportional cropping and a bottom-anchored crowd photo. The four default backgrounds are 640px-wide WebPs at quality 55 embedded directly in `music.html`, totaling about 111 KiB of image data (about 149 KiB after base64 encoding). They stay at this resolution throughout the visit. Resizing the viewport only adjusts their crops. Music's small text stroke increase stays scoped to `#music-content`.
 
-Original photos stay in `docs/assets/music_pictures/`. After replacing an original, run `node scripts/optimize-music-images.mjs` (requires `cwebp`, available in Homebrew's `webp` package). The generator preserves ICC color profiles and updates the four inline photos while retaining each tile's crop ratio and position. If a replacement has a different aspect ratio, update that tile's `--music-ratio` in `music.html` as well.
+Higher-resolution loading and cross-page prefetching remain implemented in `docs/script.js`, temporarily disabled by `MUSIC_HIGH_RESOLUTION_ENABLED = false`. Both use this one flag. Responsive image sources stay in inert `<template>` elements in `music.html`, so disabled photos make no extra requests and never replace the inline backgrounds. Setting the flag to `true` restores prefetching and the decoded full-photo handoff; original and optimized photo files remain available.
+
+Original photos stay in `docs/assets/music_pictures/`. After replacing an original, run `node scripts/optimize-music-images.mjs` (requires `cwebp`, available in Homebrew's `webp` package). The generator preserves ICC color profiles, updates the four inline photos, and regenerates the responsive copies in `optimized/` while retaining each tile's crop ratio and position. Keep the template source dimensions and widths in sync; if a replacement has a different aspect ratio, update that tile's `--music-ratio` in `music.html` as well.
 
 ## Project index and individual pages
 
