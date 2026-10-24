@@ -45,6 +45,8 @@
 .report figure img {
     display: block;
     max-width: 100%;
+    /* Half the Bandit CTS reference plot's original 1002.9px desktop height. */
+    max-height: 501.45px;
     width: auto;
     height: auto;
     margin: 1rem auto;
