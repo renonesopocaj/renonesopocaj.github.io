@@ -31,7 +31,7 @@ x NecstLab Hackathon, won the "Best idea prize".
 
 #### Other projects
 
-- [Markov Chain Monte Carlo](https://github.com/renonesopocaj/3d-queens-mcmc) for the $N^2$-queens problem.
+- [Markov Chain Monte Carlo for the $N^2$-queens problem](https://github.com/renonesopocaj/3d-queens-mcmc).
 - [FPGA Digital Filter in VHDL](https://github.com/renonesopocaj/vhdl-filter-fpga): a streaming digital filter in VHDL 
 controlled by a FSM and interfacing with a single-port memory. Conducted design, synthesis, simulation, and created 
 testbenches. Achieved 6.43 ns critical path. Synthesized and verified the design in Xilinx Vivado: 738 LUTs and 163 

@@ -17,5 +17,13 @@
 
 I'm a second-year MSc Computer Science student at EPFL interested in machine learning/AI and
 scientific computing.
-I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano. 
+I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano.
 
+Some highlights:
+- [Numerical Analysis for the $p$-Stokes problem](): work presented at [SIAM Chapters Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/).
+- [Communication Efficient LLM Decentralized Learning](): research project under MLO Lab, EPFL.
+- [Generative ML methods (diffusion models) for the inverse design of optical metasurfaces](): research project under 
+LEAP Lab and EPFL AI Team.
+- [Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases](): research project under IMOS Lab, EPFL.
+- [Adversarial Attacks Against LLM Routers](): research project for Modern NLP course.
+- [Markov Chain Monte Carlo for the $N^2$-queens problem]().
