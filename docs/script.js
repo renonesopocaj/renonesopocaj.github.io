@@ -380,68 +380,6 @@ class MarkdownLoader {
     }
 }
 
-// Warm the responsive Music photos during idle time or when its link is targeted.
-// music.html remains the source of truth for image sizes and paths.
-function prefetchMusicBackground() {
-    if (document.body.classList.contains('music-page')) return;
-
-    const musicURL = new URL('./music.html', import.meta.url);
-    let warmup = null;
-    let images = [];
-
-    function warmImages() {
-        if (warmup) return warmup;
-        warmup = (async () => {
-            const response = await fetch(musicURL);
-            if (!response.ok) throw new Error(`Music prefetch HTTP ${response.status}`);
-
-            const template = document.createElement('template');
-            template.innerHTML = await response.text();
-            const sources = [...template.content.querySelectorAll('.music-background img')];
-            if (sources.length !== 4) throw new Error('Music prefetch requires four background photos.');
-
-            images = sources.map(source => {
-                const image = new Image();
-                image.fetchPriority = 'low';
-                image.decoding = 'async';
-                image.sizes = source.sizes;
-                image.srcset = source.getAttribute('srcset').split(',').map(candidate => {
-                    const [url, width] = candidate.trim().split(/\s+/);
-                    return `${new URL(url, musicURL).href} ${width}`;
-                }).join(', ');
-                image.src = new URL(source.getAttribute('src'), musicURL).href;
-                return image;
-            });
-            await Promise.all(images.map(image => image.decode()));
-            return true;
-        })().catch(error => {
-            console.warn('Unable to prefetch Music photos:', error);
-            warmup = null;
-            return false;
-        });
-        return warmup;
-    }
-
-    document.querySelectorAll('a[href]').forEach(link => {
-        if (link.href !== musicURL.href) return;
-        link.addEventListener('pointerenter', warmImages, { once: true });
-        link.addEventListener('focus', warmImages, { once: true });
-        link.addEventListener('touchstart', warmImages, { once: true, passive: true });
-    });
-
-    // Avoid speculative transfers when the visitor requests reduced data usage.
-    if (navigator.connection?.saveData) return;
-    const enqueue = () => {
-        if ('requestIdleCallback' in window) {
-            window.requestIdleCallback(warmImages, { timeout: 1500 });
-        } else {
-            window.setTimeout(warmImages, 300);
-        }
-    };
-    if (document.readyState === 'complete') enqueue();
-    else window.addEventListener('load', enqueue, { once: true });
-}
-
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -454,7 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new LazyImageLoader();
     new MarkdownLoader();
-    prefetchMusicBackground();
 
     // Add loading state management
     document.body.classList.add('loaded');
