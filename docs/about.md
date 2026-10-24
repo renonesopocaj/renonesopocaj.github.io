@@ -25,5 +25,6 @@ Some highlights:
 - [Generative ML methods (diffusion models) for the inverse design of optical metasurfaces](): research project under 
 LEAP Lab and EPFL AI Team.
 - [Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases](): research project under IMOS Lab, EPFL.
-- [Adversarial Attacks Against LLM Routers](): research project for Modern NLP course.
-- [Markov Chain Monte Carlo for the $N^2$-queens problem]().
+- [Adversarial Attacks Against LLM Routers](): independent research project for Modern NLP course.
+
+I also (used to) make [music](https://renonesopocaj.github.io/music.html).
