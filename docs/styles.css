@@ -615,6 +615,48 @@ body {
     color: var(--color-quote);
 }
 
+/* Project index: each preview opens its own project page. */
+.project-index {
+    border-top: 1px solid var(--color-border);
+}
+
+.prose .project-entry {
+    position: relative;
+    display: block;
+    padding: 1.5rem 2rem 1.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-global-text);
+    text-decoration: none;
+}
+
+.project-entry h5 {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.project-entry p {
+    margin: 0.625rem 0 0;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.project-entry:hover h5,
+.project-entry:focus-visible h5 {
+    color: var(--color-link);
+}
+
+.project-entry-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    color: var(--color-link);
+}
+
+.project-detail .prose > h1:first-child {
+    margin-top: 0;
+}
+
 /* Project grid */
 .project-grid {
     display: grid;
@@ -1188,10 +1230,9 @@ html {
     opacity: 0.9;
 }
 
-.blog-back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
+.blog-back-link,
+.project-back-link {
+    display: inline-block;
     margin-bottom: 2rem;
     color: var(--color-link);
     text-decoration: underline;

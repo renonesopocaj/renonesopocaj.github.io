@@ -1,4 +1,4 @@
-#### Current work
+## Research experience
 
 - **Numerical Analysis for the $p$-Stokes problem**: work presented at [SIAM 
 Chapters Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/).
@@ -8,33 +8,52 @@ and Martin Jaggi at [MLO lab](https://www.epfl.ch/labs/mlo/)).
 - **[EPFL AI Team](https://epflaiteam.ch/) Student x [LEAP Lab](https://www.epfl.ch/labs/leap/)**: we're developing
 generative ML methods (diffusion models) for the inverse design of optical metasurfaces. Supervised by Mustafa Yucel, 
 Laboratory for Advanced Electromagnetics and Photonics.
-
-#### Research experience
-
 - **Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases**: I studied inductive biases in GNNs for 
 learning the solution operator of a PDE with applications in structural mechanics. 
 Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), yet not publicly available.
 
-#### Selected ML projects
+## Project index
 
-- [Bandit algorithms for neighbour sampling in decentralized learning](https://github.com/renonesopocaj/bandit-decentralized-learning): we study multi-armed bandit algorithms for 
-adaptive neighbour sampling in decentralized learning. Focused on their ability to recover latent client clusters under 
-data heterogeneity. Evaluated on FEMNIST (Federated MNIST) classification.
-- [Adversarial Attacks Against LLM Routers](https://github.com/renonesopocaj/adversarial-paraphraser): an adversarial 
-attack against LLM routers by using a paraphraser Seq2Seq model. The goal is to rewrite a query so it remains
-semantically equivalent, while increasing the probability that a router sends it to a stronger and more expensive model 
-(cost-escalation attack). 
-- [Edge AI for Obstructive Sleep Apnea Detection Repo](https://github.com/renonesopocaj/spo2t): deployed an MLP to 
-detect sleep apnea from SpO2 data on an Arduino Nicla with MAX30102 pulse oximeter, converting the ONNX model via 
-Zant SDK into a precompiled embedded runtime achieving 10 ms inference. Project developed in one day for the Bosch 
-x NecstLab Hackathon, won the "Best idea prize".
+<a class="project-entry" href="projects/bandit-decentralized-learning/">
 
-#### Other projects
+##### Bandit algorithms for neighbour sampling in decentralized learning <span class="project-entry-arrow" aria-hidden="true">&rarr;</span>
 
-- [Markov Chain Monte Carlo for the $N^2$-queens problem](https://github.com/renonesopocaj/3d-queens-mcmc).
-- [FPGA Digital Filter in VHDL](https://github.com/renonesopocaj/vhdl-filter-fpga): a streaming digital filter in VHDL 
-controlled by a FSM and interfacing with a single-port memory. Conducted design, synthesis, simulation, and created 
-testbenches. Achieved 6.43 ns critical path. Synthesized and verified the design in Xilinx Vivado: 738 LUTs and 163 
-registers with no DSP/RAM blocks, meeting a 20 ns clock constraint with 13.521 ns slack and passing reset, saturation, 
-and large-input testbenches.
+We study how multi-armed bandit algorithms are able to recover underlying latent clusters in data partitions by 
+enabling adaptive neighbour sampling, in a decentralized learning setting.
 
+</a>
+
+<a class="project-entry" href="projects/adversarial-paraphraser/">
+
+##### Adversarial Attacks Against LLM Routers <span class="project-entry-arrow" aria-hidden="true">&rarr;</span>
+
+An adversarial attack against LLM routers by using a paraphraser Seq2Seq model.
+
+</a>
+
+<a class="project-entry" href="projects/spo2t/">
+
+##### Edge AI for Obstructive Sleep Apnea Detection Repo <span class="project-entry-arrow" aria-hidden="true">&rarr;</span>
+
+Simple MLP to detect sleep apnea from SpO2 data on an Arduino Nicla with MAX30102 pulse oximeter, converting the ONNX 
+model via Zant SDK into a precompiled embedded runtime, achieving 10 ms inference.
+
+</a>
+
+</div>
+
+<a class="project-entry" href="projects/3d-queens-mcmc/">
+
+##### Markov Chain Monte Carlo for the $N^2$-queens problem <span class="project-entry-arrow" aria-hidden="true">&rarr;</span>
+
+</a>
+
+<a class="project-entry" href="projects/vhdl-filter-fpga/">
+
+##### FPGA Digital Filter in VHDL <span class="project-entry-arrow" aria-hidden="true">&rarr;</span>
+
+A streaming digital filter in VHDL controlled by a FSM and interfacing with a single-port memory.
+
+</a>
+
+</div>

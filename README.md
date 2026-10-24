@@ -11,7 +11,11 @@ docs/
   index.html          Home page: About + Publications sections, header/nav/theme toggle
   about.md            About section: profile, social links, and introduction
   projects.html       Projects page with shared navigation and Markdown loading
-  projects.md         Current work, research experience, and selected/other projects
+  projects.md         Research experience and the project index
+  projects/
+    <repository>/
+      index.html      Individual project page with shared navigation
+      project.md      Project title, full description, and GitHub repository link
   music.html          Music page with shared navigation and Markdown loading
   music.md            Music section content
   publications.md     Publications section content (TODO)
@@ -33,7 +37,7 @@ docs/
 
 ## How the markdown pipeline works
 
-`about.md`, `projects.md`, `music.md`, `publications.md`, and every blog post are Markdown, fetched at runtime and rendered client-side (no build step). One shared engine does this everywhere - defined once in `docs/script.js` as `renderMarkdown()`, imported by `docs/blog/blog-post.js` for posts:
+`about.md`, `projects.md`, each project's `project.md`, `music.md`, `publications.md`, and every blog post are Markdown, fetched at runtime and rendered client-side (no build step). One shared engine does this everywhere - defined once in `docs/script.js` as `renderMarkdown()`, imported by `docs/blog/blog-post.js` for posts:
 
 - **Engine:** [markdown-it](https://github.com/markdown-it/markdown-it), loaded from jsDelivr's ESM CDN (`markdown-it@14/+esm`), with `html: true` - meaning raw HTML in your `.md` files (like the social-link `<div>` in `about.md`) passes through untouched.
 - **Math:** [markdown-it-texmath](https://github.com/goessner/markdown-it-texmath) + [KaTeX](https://katex.org/), also via ESM CDN. Math is tokenized *before* markdown-it's backslash-escaping rule runs, so `\\` line breaks and `\{`/`\}` inside `$$...$$` blocks render correctly (this is why a naive "run KaTeX auto-render on the final HTML" approach isn't used - it breaks on exactly that case).
@@ -42,6 +46,12 @@ docs/
 Because it's one shared engine, **images, video embeds, and LaTeX work the same way in `about.md`, `projects.md`, `music.md`, and `publications.md` as they do in blog posts.**
 
 About, Projects, Blog, and Music are linked from every page's header. The three Markdown pages use matching `about-content`, `projects-content`, and `music-content` containers, and `MarkdownLoader` only loads content for containers present on the current page. Keep these headers in sync when updating navigation.
+
+## Project index and individual pages
+
+Research experience stays on `docs/projects.md`. Selected ML projects and Other projects use clickable previews that open `projects/<repository>/`. Each project directory contains its own `index.html` and `project.md`; the shared loader renders `project.md` into `project-content`. Full descriptions and GitHub links live on those individual pages, while the index shows a short excerpt.
+
+To add a project, copy an existing project directory, edit its page title and description metadata, and update `project.md`. Add a corresponding preview to the appropriate group in `docs/projects.md`. Keep blank lines around the preview's opening/closing `<a>` tags and its Markdown text so headings and LaTeX render correctly. Each detail page links back to `../../projects.html` and uses the same About, Projects, Blog, and Music navigation. Local images and downloads can live beside `project.md`, with paths relative to that project's page.
 
 ## Adding a blog post
 
@@ -74,11 +84,11 @@ The font is defined in exactly two places:
    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
    ```
    `--font-body` is used by `body` (i.e. all prose text); `--font-mono` is used by `.font-mono` and by code blocks/inline code in `.prose`. They're separate on purpose - you can swap the body font to something non-monospace without also changing how code looks. Edit these two lines to change the font(s) used across the whole site.
-2. **The Google Fonts `<link>`** in the `<head>` of each HTML page (`docs/index.html`, `docs/projects.html`, `docs/music.html`, `docs/blog/index.html`, `docs/blog/post.html`) - currently:
+2. **The Google Fonts `<link>`** in the `<head>` of each HTML page (`docs/index.html`, `docs/projects.html`, `docs/music.html`, `docs/blog/index.html`, `docs/blog/post.html`, and each `docs/projects/<repository>/index.html`) - currently:
    ```html
    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    ```
-   Replace the `family=` value with your chosen [Google Fonts](https://fonts.google.com/) family (or point at a different font host, or a self-hosted `@font-face`). This tag has to be updated in all five HTML files, since there's no shared header include in a build-free static site.
+   Replace the `family=` value with your chosen [Google Fonts](https://fonts.google.com/) family (or point at a different font host, or a self-hosted `@font-face`). This tag has to be updated in every HTML file, since there's no shared header include in a build-free static site.
 
 ## Development
 

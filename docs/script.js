@@ -315,10 +315,10 @@ class LazyImageLoader {
     }
 }
 
-// Markdown content loader for About, Projects, Music, and Publications.
+// Markdown content loader for About, Projects, project details, Music, and Publications.
 class MarkdownLoader {
     constructor() {
-        this.sections = ['about', 'projects', 'music', 'publications'];
+        this.sections = ['about', 'projects', 'project', 'music', 'publications'];
         this.init();
     }
 
