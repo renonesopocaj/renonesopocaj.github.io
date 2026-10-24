@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/renonesopocaj/vhdl-filter-fpga",
+  "commit": "759c50e442f70e83bb3dcf4db8ed09483511c7e7",
+  "originalPdf": "https://raw.githubusercontent.com/renonesopocaj/vhdl-filter-fpga/759c50e442f70e83bb3dcf4db8ed09483511c7e7/vhdl_filter_report.pdf",
+  "pdfSha256": "fe86d9ce0b2cece322758e8120a66fa0fcc53d0349fb718131d502e3af6dcba0",
+  "sourceArchive": "progetto_reti_logiche.zip",
+  "archiveSha256": "d0467f137a907ac5d04653db2a41c65fa3b1988fd50183289babec3db75d63e0",
+  "pages": 15,
+  "figures": 8,
+  "imagePlacements": 8,
+  "mathExpressions": 162,
+  "reportTextSha256": "2120327386733db865e757a40f0a51d26388903607555f082bc792e26c6fb2d3",
+  "files": [
+    {
+      "path": "report/img/calcolo_filtro_simulato.jpg",
+      "sha256": "aa994831f05017b06c3e1557a8d0194f6e2caa6fa33f2d94193bff8812732041"
+    },
+    {
+      "path": "report/img/pre_project_schematic.jpg",
+      "sha256": "6902d10d337e87a5470178c9dc14220864dbc231d5dd0570a3473b4110a12c40"
+    },
+    {
+      "path": "report/img/pre_project_schematic_filter.jpg",
+      "sha256": "a64a0e4dba909db8fbf3e1efb9181dd50dc5137c4b9016d2a657dea1c9dda276"
+    },
+    {
+      "path": "report/img/pre_project_schematic_saturatore.jpg",
+      "sha256": "1232a129c0fec3ca58e8333516b239b7bc325da5831e25e417f58b86b4a25324"
+    },
+    {
+      "path": "report/img/FSM_graph.drawio.png",
+      "sha256": "3eccaf4c52044ac4af6525a99fcada64671f4dfd1af723e9daf3a04bf7fbd5ec"
+    },
+    {
+      "path": "report/img/utilizzation_1.png",
+      "sha256": "a180250d7ecfb41bab882977831364213825087669251f91eba34bd0bd4d05ce"
+    },
+    {
+      "path": "report/img/utilizzation_2.png",
+      "sha256": "83a011682199c97518b6cff2f81e27d07084d24890eb340fd1b68d9dcb23c789"
+    },
+    {
+      "path": "report/img/report_timing.png",
+      "sha256": "382d3b8e98a722e812f4eb7ecea686d8272459721a71a9b60ec2a1d82fa6ef36"
+    }
+  ],
+  "fidelityNotes": "The English LaTeX source is authoritative. Its compiled text matches the GitHub PDF byte for byte, including the table of contents."
+}

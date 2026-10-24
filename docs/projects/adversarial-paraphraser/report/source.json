@@ -1,0 +1,112 @@
+{
+  "repository": "https://github.com/renonesopocaj/adversarial-paraphraser",
+  "commit": "4364420ceaea5302ede015bee26d6cdfb625e0b2",
+  "originalPdf": "https://raw.githubusercontent.com/renonesopocaj/adversarial-paraphraser/4364420ceaea5302ede015bee26d6cdfb625e0b2/report/CS_552_2026_Final_Report_Chaddetto.pdf",
+  "pdfSha256": "ee2f58be95f2584c32ab6512d111fae736a39c2cd150e61c270ffae1e02f8d8a",
+  "sourceArchive": "CS_552_2026_Final_Report_Chaddetto.zip",
+  "archiveSha256": "d218f522ad6d1f3e180b70366273848c8ef280d170ca1075ea7e5542d665c74c",
+  "pages": 19,
+  "figures": 17,
+  "imagePlacements": 24,
+  "mathExpressions": 245,
+  "reportTextSha256": "d921de58bd8e0c6cd5f53d056033f960e100abfd4d5aa5b374d936002bc90ce2",
+  "files": [
+    {
+      "path": "report/figures/original-report/data-pipeline.svg",
+      "sha256": "496b7592889e71c6d190064980434649743f20e241d0fcb79a010828bd523eb2"
+    },
+    {
+      "path": "report/figures/original-report/data-transform.svg",
+      "sha256": "06598ef30a569325f629de676a3037943ceb96f63b266a3f9cb48d8b0075b107"
+    },
+    {
+      "path": "report/figures/FINETUNED-AGGRESSIVE/ASR.png",
+      "sha256": "a56e96d522465265d599fbff4336849a44a914cfeb4f794b65b4e9c0f63dc8d9"
+    },
+    {
+      "path": "report/figures/ABLATIONS/ASR.png",
+      "sha256": "6c9d487878af1365dd81b2199c7eca4fbc07e175091ec98f936df00616053f7e"
+    },
+    {
+      "path": "report/figures/FINETUNED-AGGRESSIVE/SIMR.png",
+      "sha256": "65967b6e18897fe03c438e6a13d98b916d548cdd6fef9f00d5f1c94f7328b797"
+    },
+    {
+      "path": "report/figures/ABLATIONS/SIMR.png",
+      "sha256": "e8473bdb12d84e99171aa18aff12c7dea85103e87ba17430284a1a74fc051e03"
+    },
+    {
+      "path": "report/figures/FINETUNED-AGGRESSIVE/KLD.png",
+      "sha256": "9aef923138f25eccfb663eceabdd35e2a2ea55e3025990cd2ef5d67d434e491f"
+    },
+    {
+      "path": "report/figures/ABLATIONS/KL.png",
+      "sha256": "dc2c637b78f42ddb6278dd3c86a5a59a324e66e25ce136a3696dcf4555dae4e8"
+    },
+    {
+      "path": "report/figures/FINETUNED-AGGRESSIVE/MeanR.png",
+      "sha256": "b72037c1049887fd2f671aab0a0fcda91985dee40cff9370c76af67e39e5187c"
+    },
+    {
+      "path": "report/figures/ABLATIONS/MeanR.png",
+      "sha256": "30e2868f2e14890dc8a800f9159249ba6c637c8ada056f233b9376475434c6da"
+    },
+    {
+      "path": "report/figures/MEAN_REWARD/FT.png",
+      "sha256": "0ae08fc7db3b59e8e508b826326ee0fe5ab31f9a0e3903d011df32ce01044420"
+    },
+    {
+      "path": "report/figures/MEAN_REWARD/NC.png",
+      "sha256": "739fef289f3590662cca042703a4d802125a2c24d79299852da609805032f8d8"
+    },
+    {
+      "path": "report/figures/RESULTS/EVAL.png",
+      "sha256": "548c0f8cb22d4532e055bc65098f94f5d9458c2839f0f5feaeca10f95e97208b"
+    },
+    {
+      "path": "report/figures/RESULTS/TRANSF.png",
+      "sha256": "aab09395f8532ad2721341cee0be169fa08991e7bbccc2143566dbe4c27808e1"
+    },
+    {
+      "path": "report/figures/RESULTS/DS-FT.jpeg",
+      "sha256": "753b1a2527289ebcd8b56ab25c4aa7440daa92d31ed22e9cb4cdb981718d0e7b"
+    },
+    {
+      "path": "report/figures/RESULTS/DS-AGG.jpeg",
+      "sha256": "c32380658e63e217524ee65c5f4a4569c588e1b13d9e9c44244f7acc06beb393"
+    },
+    {
+      "path": "report/figures/RESULTS/OOD-IFEVAL.png",
+      "sha256": "3008b235ee695e24ea3689a564dfaedb9d249679f64429c957995d6c9168faf7"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_evaluation_routellm_bert.png",
+      "sha256": "171e147179796f9de45ad9bf7f5ded7b7054b628ac8a25d9ec9cc2a74f3fb131"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_evaluation_chayan.png",
+      "sha256": "b3e1547882e45094077f2a9d2cbd35547753d762fa1b1d5fb02f246790918e34"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_evaluation_routellm_causal.png",
+      "sha256": "ee737098d4fb418735342b7b5583b86356c8283e99c4d2d3ffcbc22c439aa0e7"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_transferability_r2.png",
+      "sha256": "c072fbb8f59087e05ee7134b633f6fe566b5bf389dc55a89f81b4e3d5a2b07ac"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_transferability_routellm_mf.png",
+      "sha256": "fb7d95884e97c7d0f6ff9aee8bc96c40018e69937818d37a9374b67817e569eb"
+    },
+    {
+      "path": "report/figures/RESULTS/ASRvSIM/pareto_transferability_routellm_sw.png",
+      "sha256": "b3aef0913dea7fae686be44611506843b487e156f1e313b7cbeda8d63077a29e"
+    },
+    {
+      "path": "report/figures/CAUSAL-SIMBETA-SWEEP/FRONTIER.png",
+      "sha256": "6cead8ea4e099ccde2fdcde48ad37126ad738fc3785391a1483b34b2d525927f"
+    }
+  ],
+  "fidelityNotes": "Original LaTeX and plot files are preserved in HTML/MathML. Two diagrams are lossless vector crops of original PDF page 6. Converted reference labels and the quoted word flipped are reconciled with the PDF. Source-generated MathML restores all seven original less-than signs after a converter parser artifact. The original course and semester running header appears once above the title."
+}

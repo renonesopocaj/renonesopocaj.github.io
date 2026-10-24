@@ -12,7 +12,7 @@ Laboratory for Advanced Electromagnetics and Photonics.
 learning the solution operator of a PDE with applications in structural mechanics. 
 Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), yet not publicly available.
 
-## Project index
+## Projects
 
 <a class="project-entry" href="projects/bandit-decentralized-learning/">
 

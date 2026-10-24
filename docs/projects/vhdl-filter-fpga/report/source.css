@@ -1,0 +1,241 @@
+/* Scoped original TeX4ht presentation; figures retain their original colors. */
+.report .lmbsy-10 {font-weight:bold;}
+.report .lmbsy-10 {font-weight:bold;}
+.report .lmbsy-10 {font-weight:bold;}
+.report .lmbsy-7 {font-size:70%;font-weight:bold;}
+.report .lmbsy-7 {font-weight:bold;}
+.report .lmbsy-7 {font-weight:bold;}
+.report .lmbsy-5 {font-size:50%;font-weight:bold;}
+.report .lmbsy-5 {font-weight:bold;}
+.report .lmbsy-5 {font-weight:bold;}
+.report .msam-7 {font-size:70%;}
+.report .msam-5 {font-size:50%;}
+.report .msbm-7 {font-size:70%;}
+.report .msbm-5 {font-size:50%;}
+.report .rm-lmr-7 {font-size:70%;}
+.report .rm-lmr-5 {font-size:50%;}
+.report .lmmi-7 {font-size:70%;}
+.report .lmmi-5 {font-size:50%;}
+.report .lmsy7- {font-size:70%;}
+.report .lmsy5- {font-size:50%;}
+.report .ec-lmss-10 { font-family: sans-serif;}
+.report .ec-lmss-10 { font-family: sans-serif;}
+.report .ec-lmss-10 { font-family: sans-serif;}
+.report .ec-lmss-10 { font-family: sans-serif;}
+.report .ec-lmss-10 { font-family: sans-serif;}
+.report .ec-lmss-17 {font-size:170%; font-family: sans-serif;}
+.report .ec-lmss-17 { font-family: sans-serif;}
+.report .ec-lmss-17 { font-family: sans-serif;}
+.report .ec-lmss-17 { font-family: sans-serif;}
+.report .ec-lmss-17 { font-family: sans-serif;}
+.report .ec-lmss-12 {font-size:120%; font-family: sans-serif;}
+.report .ec-lmss-12 { font-family: sans-serif;}
+.report .ec-lmss-12 { font-family: sans-serif;}
+.report .ec-lmss-12 { font-family: sans-serif;}
+.report .ec-lmss-12 { font-family: sans-serif;}
+.report .ec-lmssbx-10 { font-family: sans-serif; font-weight: bold;}
+.report .ec-lmssbx-10 { font-family: sans-serif; font-weight: bold;}
+.report .ec-lmssbx-10 { font-family: sans-serif; font-weight: bold;}
+.report .ec-lmssbx-10 { font-family: sans-serif; font-weight: bold;}
+.report .ec-lmssbx-10 { font-family: sans-serif; font-weight: bold;}
+.report .ec-lmsso-10 { font-family: sans-serif; font-style: oblique;}
+.report .ec-lmsso-10 { font-family: sans-serif; font-style: oblique;}
+.report .ec-lmsso-10 { font-family: sans-serif; font-style: oblique;}
+.report .ec-lmsso-10 { font-family: sans-serif; font-style: oblique;}
+.report .ec-lmsso-10 { font-family: sans-serif; font-style: oblique;}
+.report p {margin-top:0;margin-bottom:0}
+.report p.indent {text-indent:0;}
+.report p + p {margin-top:1em;}
+.report p + div,
+.report p + pre {margin-top:1em;}
+.report div + p,
+.report pre + p {margin-top:1em;}
+.report a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+.report div.crosslinks {visibility:hidden;}
+.report table.tabular {border-collapse: collapse; border-spacing: 0;}
+.report a img { border-top: 0; border-left: 0; border-right: 0; }
+.report center { margin-top:1em; margin-bottom:1em; }
+.report td center { margin-top:0em; margin-bottom:0em; }
+.report .Canvas { position:relative; }
+.report math { text-indent: 0em; }
+.report h1,
+.report h2,
+.report h3,
+.report h4,
+.report h5 { line-height:1.2; }
+.report .partHead,
+.report .likepartHead { font-size: 2em; }
+.report .chapterHead,
+.report .likechapterHead { font-size: 1.7411em; }
+.report .sectionHead,
+.report .likesectionHead { font-size: 1.5157em; }
+.report .subsectionHead,
+.report .likesubsectionHead { font-size: 1.3195em; }
+.report .subsubsectionHead,
+.report .likesubsubsectionHead { font-size: 1.1487em; }
+.report li p.indent { text-indent: 0em }
+.report li p:first-child { margin-top:0em; }
+.report li p:last-child,
+.report li div:last-child { margin-bottom:0.5em; }
+.report li p:first-child { margin-bottom:0; }
+.report li p~ul:last-child,
+.report li p~ol:last-child { margin-bottom:0.5em; }
+.report .enumerate1 {list-style-type:decimal;}
+.report .enumerate2 {list-style-type:lower-alpha;}
+.report .enumerate3 {list-style-type:lower-roman;}
+.report .enumerate4 {list-style-type:upper-alpha;}
+.report div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+.report div.newtheorem .head {font-weight: bold;}
+.report .obeylines-h,
+.report .obeylines-v {white-space: nowrap; }
+.report div.obeylines-v p { margin-top:0; margin-bottom:0; }
+.report .overline { text-decoration:overline; }
+.report .overline img { border-top: 1px solid black; }
+.report td.displaylines {text-align:center; white-space:nowrap;}
+.report .centerline {text-align:center;}
+.report .rightline {text-align:right;}
+.report pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+.report .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.report div.fbox {display:table}
+.report div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.report div.minipage {width:100%;}
+.report div.center,
+.report div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+.report div.center div {text-align: left;}
+.report div.flushright,
+.report div.flushright div.flushright {text-align: right;}
+.report div.flushright div {text-align: left;}
+.report div.flushleft {text-align: left;}
+.report .underline { text-decoration:underline; }
+.report .underline img { border-bottom: 1px solid black; margin-bottom:1pt; }
+.report .framebox-c,
+.report .framebox-l,
+.report .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.report .framebox-c {text-align:center;}
+.report .framebox-l {text-align:left;}
+.report .framebox-r {text-align:right;}
+.report span.thank-mark { vertical-align: super }
+.report span.footnote-mark sup.textsuperscript,
+.report span.footnote-mark a sup.textsuperscript { font-size:80%; }
+.report code.verb {font-family:monospace,monospace;}
+.report div.tabular,
+.report div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+.report table.tabular td p {margin-top:0em;}
+.report table.tabular {margin-left: auto; margin-right: auto;}
+.report td p:first-child { margin-top:0em; }
+.report td p:last-child { margin-bottom:0em; }
+.report div.td00 { margin-left:0pt; margin-right:0pt; }
+.report div.td01 { margin-left:0pt; margin-right:5pt; }
+.report div.td10 { margin-left:5pt; margin-right:0pt; }
+.report div.td11 { margin-left:5pt; margin-right:5pt; }
+.report table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.report td.td00 { padding-left:0pt; padding-right:0pt; }
+.report td.td01 { padding-left:0pt; padding-right:5pt; }
+.report td.td10 { padding-left:5pt; padding-right:0pt; }
+.report td.td11 { padding-left:5pt; padding-right:5pt; }
+.report table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.report .hline hr,
+.report .cline hr { height : 0px; margin:0px; }
+.report .hline td,
+.report .cline td { padding: 0; }
+.report .hline hr,
+.report .cline hr {border:none;border-top:1px solid black;}
+.report .hline {border-top: 1px solid black;}
+.report .hline + .vspace:last-child {display:none;}
+.report .tabbing-right {text-align:right;}
+.report div.float,
+.report div.figure {margin-left: auto; margin-right: auto;}
+.report div.float img {text-align:center;}
+.report div.figure img {text-align:center;}
+.report .marginpar,
+.report .reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.report .marginpar p,
+.report .reversemarginpar p {margin-top:0.4em; margin-bottom:0.4em;}
+.report .reversemarginpar {float:left;}
+.report .equation td {text-align:center; vertical-align:middle; }
+.report td.eq-no { width:5%; }
+.report table.equation { width:100%; }
+.report div.math-display,
+.report div.par-math-display {text-align:center;}
+.report .array-hline,
+.report .array-cline { border-top: 1px solid black; height:0px; }
+.report .array-hline + .array-vspace:last-child {display:none;}
+.report .hline-mtd,
+.report .array-hline td { display:none }
+.report .array-hline:first-child {border-bottom:1px solid black;border-top:none;}
+.report math .texttt { font-family: monospace; }
+.report math .textit { font-style: italic; }
+.report math .textsl { font-style: oblique; }
+.report math .textsf { font-family: sans-serif; }
+.report math .textbf { font-weight: bold; }
+.report mo.MathClass-op + mi {margin-left:0.3em}
+.report mi + mo.MathClass-op {margin-left:0.3em}
+.report math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; }
+.report math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; }
+.report .partToc a,
+.report .partToc,
+.report .likepartToc a,
+.report .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+.report .index-item,
+.report .index-subitem,
+.report .index-subsubitem {display:block}
+.report div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center; margin-top: 0.5rem;}
+.report div.caption span.id {font-weight: bold; white-space: nowrap; }
+.report h1.partHead {text-align: center}
+.report p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.report p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.report .subsubsectionHead,
+.report .likesubsubsectionHead { font-size: 1em; }
+.report .paragraphHead,
+.report .likeparagraphHead { margin-top:2em; font-weight: bold;}
+.report .subparagraphHead,
+.report .likesubparagraphHead { font-weight: bold;}
+.report .verse {white-space:nowrap; margin-left:2em}
+.report div.maketitle {text-align:center;}
+.report h2.titleHead {text-align:center;}
+.report div.maketitle { margin-bottom: 2em; }
+.report div.author,
+.report div.date {text-align:center;}
+.report div.thanks {text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+.report div.author {white-space: nowrap;}
+.report div.abstract p {margin-left:5%; margin-right:5%;}
+.report div.abstract {width:100%;}
+.report .abstracttitle {text-align:center;margin-bottom:1em;}
+.report .subsectionToc,
+.report .likesubsectionToc {margin-left:1em;}
+.report .subsubsectionToc,
+.report .likesubsubsectionToc {margin-left:2em;}
+.report .paragraphToc,
+.report .likeparagraphToc {margin-left:3em;}
+.report .subparagraphToc,
+.report .likesubparagraphToc {margin-left:4em;}
+.report figure.float,
+.report div.figure {margin-left: auto; margin-right: auto;}
+.report figure.figure {text-align:center;}
+.report figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+.report figcaption.caption span.id {font-weight: bold; white-space: nowrap; }
+.report p + figcaption,
+.report img + figcaption {margin-top: 1em;}
+.report .abstract {margin:1em;}
+.report .rotatebox {display: inline-block;}
+.report dl.enumerate-enumitem {display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
+.report div.subfigure {text-align:center;display:inline-block; max-width:45%; margin-right: 2rem;}
+.report code.lstinline {font-family:monospace,monospace;}
+.report pre.listings {font-family: monospace,monospace; white-space: pre-wrap; margin-top:0.5em; margin-bottom:0.5em; }
+.report .lstlisting .label {margin-right:0.5em; }
+.report pre.lstlisting {font-family: monospace,monospace; white-space: pre-wrap; margin-top:0.5em; margin-bottom:0.5em; text-align: left; }
+.report pre.lstinputlisting { font-family: monospace,monospace; white-space: pre-wrap; text-align: left; }
+.report .lstinputlisting .label {margin-right:0.5em;}
+.report .equation-star td {text-align:center; vertical-align:middle; }
+.report table.equation-star { width:100%; }
+.report .boxed {border: 1px solid black; padding-left:2px; padding-right:2px;}
+.report mtd.align-odd {margin-left:2em; text-align:right;}
+.report mtd.align-even {margin-right:2em; text-align:left;}
+.report .cancel {background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
+.report .bcancel {background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
+.report .xcancel {background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%), linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
+.report .tcolorbox {margin-top:0.5em;margin-bottom: 0.5em;}
+.report .tcolorbox .lowerbox {margin-top:0pt;}
+.report div.verbatiminput {font-family: monospace,monospace; white-space: nowrap; }
+.report .mdframed {margin-top:1em;margin-bottom:1em;}
+.report .framedenv {border: 1px solid black;}

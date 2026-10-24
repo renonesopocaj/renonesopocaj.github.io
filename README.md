@@ -53,6 +53,14 @@ Research experience stays on `docs/projects.md`. Selected ML projects and Other 
 
 To add a project, copy an existing project directory, edit its page title and description metadata, and update `project.md`. Add a corresponding preview to the appropriate group in `docs/projects.md`. Keep blank lines around the preview's opening/closing `<a>` tags and its Markdown text so headings and LaTeX render correctly. Each detail page links back to `../../projects.html` and uses the same About, Projects, Blog, and Music navigation. Local images and downloads can live beside `project.md`, with paths relative to that project's page.
 
+### Complete project reports
+
+Bandit, Adversarial Paraphraser, MCMC, and FPGA include their complete original reports after `<!-- COMPLETE ORIGINAL REPORT -->` in each `project.md`. The reports are flowing HTML with native MathML inside Markdown, preserving the original wording, numbered equations, captions, tables, references, and appendices. Keep the report's HTML together without blank lines so the Markdown renderer passes it through unchanged.
+
+Each project's `report/` folder contains its original figures, scoped source styling, and `source.json` with the authoritative GitHub PDF commit, source hashes, figure inventory, and imported-text hash. Original PNG/JPEG files retain their bytes; the two Adversarial diagrams are vector crops of the original PDF. The MCMC ZIP contains an earlier draft, so its complete final report is recovered from the pinned GitHub PDF. The Bandit Conclusion follows the published PDF rather than the newer draft paragraph in the ZIP.
+
+`docs/report.css` provides the shared responsive report layout. Each report page loads it after `report/source.css`; these styles stay scoped to `.report`. The text hover effect skips MathML and KaTeX so mathematical markup remains intact. When replacing a report, compare its full text and every figure with the authoritative PDF before updating its content hashes.
+
 ## Adding a blog post
 
 1. Write `docs/blog/posts/<slug>.md`. Use `welcome-to-the-blog.md` as a template:

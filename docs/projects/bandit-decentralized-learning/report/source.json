@@ -1,0 +1,160 @@
+{
+  "repository": "https://github.com/renonesopocaj/bandit-decentralized-learning",
+  "commit": "97bfc09b863e7146ece7f5b7d33005611a2ff52a",
+  "originalPdf": "https://raw.githubusercontent.com/renonesopocaj/bandit-decentralized-learning/97bfc09b863e7146ece7f5b7d33005611a2ff52a/report/Bandit%20Based%20Neighbor%20Selection%20for%20Decentralized%20Learning%20under%20Data%20Heterogeneity.pdf",
+  "pdfSha256": "b3c75346b38ed614dcc99d5640dc8d679a907653245204250bd14d1e0d8f9eaa",
+  "sourceArchive": "Bandit_Based_Neighbor_Selection_for_Decentralized_Learning_under_Data_Heterogeneity.zip",
+  "archiveSha256": "bda38e620b6a721bf9d7b5a770103c01b50449ad6f48a62538f01abe21c73325",
+  "pages": 10,
+  "figures": 10,
+  "imagePlacements": 37,
+  "mathExpressions": 124,
+  "reportTextSha256": "88bf04f4f525770e6bb0045db53c1ec1654926da67f7b0b9a7fdf1a33ffbc5f2",
+  "files": [
+    {
+      "path": "report/figures/femnist-pathological-clusters/femnist_pareto.png",
+      "sha256": "30018facb57567d11bdfd64f2866c64696b49359839c07f3fb446c2e98853f0e"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/femnist_loss_pareto.png",
+      "sha256": "8897f9be7dfd6e5156f894e6a8ccece6e61da797c34c26703025eb5c287ab830"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/probabilities/cts-C5-cosine.png",
+      "sha256": "2ae7b1db43c6e80f150e49cc16ee5c9a97ed3d1be1791952b75f9e69de38517c"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/probabilities/exp3-C5-Cosine.png",
+      "sha256": "fa47525b03dfa3487c21c2754305c865e6f5dc1c31d3d343efd0e5dfe67ddfb1"
+    },
+    {
+      "path": "report/figures/femnist-alpha-clusters/cts-cosine-c10-alpha10.png",
+      "sha256": "29268a238b21c5f581f27ac8e61b83a39af18e049c9460a7095648d36bca2564"
+    },
+    {
+      "path": "report/figures/femnist-alpha-clusters/cts-cosine-c10-alpha05.png",
+      "sha256": "3bc0359c5cfd654fe35a41154bfb2abff621b7fb9be37d2ac7ca63748d60bd97"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/femnist_reward_accuracy_heatmaps.png",
+      "sha256": "ba1e3c16b316a9af09a070b88e0da1f0a6b599bfdac9d87979be1b8e485b869f"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/femnist_pathological_reward_delta.png",
+      "sha256": "41b3ea2fc72b8c22c8ad31a2c92243c0ec063d333989a3179cea9d509ceea14d"
+    },
+    {
+      "path": "report/figures/femnist-alpha-clusters/femnist_alpha_reward_delta.png",
+      "sha256": "d9e7caa8a0256a4b4ee1eed8113b6a90bb15db16f43fd0bacb0e9ea400f79e9d"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/misc/femnist_imd_neighbor_disagreement.png",
+      "sha256": "8d47b5deb95cb6402d176cb85cdd0381b5c506542ac3a78bb73eff7cfdde99ee"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/misc/femnist_imd_normalized_regret.png",
+      "sha256": "8181964c7c0c44e4df75de278d1e9377e449ff7dd416de3872cd7af99de44abf"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs/5c/exp3/clustering_sampler_probability.png",
+      "sha256": "59e09195080f2176d86e835b2742628be4d1f1cdbaa91db34eec87de542bf2f9"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_cts_imd_gradient_norm.png",
+      "sha256": "1c13598557b3e32c88d9dd0b177056335b6a2b7d1f713b1ab988dc29068a2314"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_exp3_imd_gradient_norm.png",
+      "sha256": "e2cf0c93b5d0c765b046ef0097551fffe294d1696370a754831e7db8c3621265"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_cts_imd_neighbor_disagreement.png",
+      "sha256": "a4540e35634ff21ab64198520d62bf56913f18bff2df7f5af1c612ac6790a275"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_exp3_imd_neighbor_disagreement.png",
+      "sha256": "ac152dc00cfb82f68dd1b0623d21fce1c9a35f5d7eee2e9031433a53704830db"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_cts_imd_regret.png",
+      "sha256": "8b13c438ca467a6b3b14bc561cc8636455aae1a63305c6357135bbca961d6e74"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_exp3_imd_regret.png",
+      "sha256": "1f0061b3c6b671e8add722f976542e7d4d2e7d8c38508911b88651f7bf2ebc3a"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_cts_imd_train_loss.png",
+      "sha256": "e51846b1af143db88ae7ad84ea1602721099feecf8e40f2cd129263b2a719054"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_exp3_imd_train_loss.png",
+      "sha256": "eebb935834acd449666f63545a3c9415f322285805b18e90bde59ab82977b8c0"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_cts_imd_validation_accuracy.png",
+      "sha256": "2403551e795b905c0285e07ba2b5db0cf37da595cf99f1225b372cf8f1451463"
+    },
+    {
+      "path": "report/figures/femnist-pathological-clusters/single-runs-selected/femnist_exp3_imd_validation_accuracy.png",
+      "sha256": "991e16ecca829a03554c17f36d2fbf830bede4802fa918181d31b6724c66fc2b"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_cosine/validation_accuracy.png",
+      "sha256": "6057550eee67c696dbde5fb6b10bcc398bf58e91782870a549c0b3989efae141"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_cosine/train_loss.png",
+      "sha256": "d99e3d86d19c38bcb9763748c9d8d31b069c049817f407617e71add8ad0a83e3"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_cosine/regret.png",
+      "sha256": "5deda0958d53fd7337cf7831b3d8a2ddc3ae33aa21022693a9c6b8f52e95c4ea"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_model/cucb_pdist_nodisc_validation_accuracy.png",
+      "sha256": "d63916ccfedcdbf8ee1002b11ebf7f2dec88c575e489bae6b664b59126a58a66"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_model/cucb_pdist_nodisc_train_loss.png",
+      "sha256": "9df17ead8a5a1ceebe71dc0920429ee48e92a2a4f36f9b8a4c7e623ff98c0523"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cucb_model/cucb_pdist_regret_nodisc.png",
+      "sha256": "16eef329e9808f97c4a7fe832d07f129ce9e6d1d1b102b4dc6998d46f3ae1727"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_discount_comparison/gamma09_cts_clustering_sampler_probability.png",
+      "sha256": "6494b30753ae087f867cee0ade97a36731e624f3cd93380d394654aa02ea9db8"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_discount_comparison/gamma095_cts_clustering_sampler_probability.png",
+      "sha256": "6bf4f4117c2f5f2d865405cfb03b6ba86c7fbf886ae9779d5e2bb9e7393b442d"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_discount_comparison/gamma099_cts_clustering_sampler_probability.png",
+      "sha256": "fc735fbc84b1ca195e45be956f9ed9812bbec0d26463b980127e90eb6383f276"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_discount_comparison/nodisc_cts_clustering_sampler_probability.png",
+      "sha256": "c80751e0bc51aee840d0aa5a2f72a8dbeb154ee33d058ea479241034fda598d2"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_comparison_cucbvscts/cucb_model_clustering_neighbor_disagreement.png",
+      "sha256": "1fab5aaefa056e0fbb8842519bcc35b4b65d85c7bcd708b7160800f973015d2a"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_comparison_cucbvscts/cucb_global_accuracy.png",
+      "sha256": "43e70e644ba54e1a36c62503825db8360161747f8cd0b1822320d86368f6d2b9"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_comparison_cucbvscts/cts_model_clustering_neighbor_disagreement.png",
+      "sha256": "98500c846549c29872d04c645f687a8c35f2e48f5f7936114f68b89053fdbdbc"
+    },
+    {
+      "path": "report/figures/cifar_mattea_260610/cluster_comparison_cucbvscts/cts_global_accuracy.png",
+      "sha256": "d82b41cab18c5ac60c63450415ac167783931bbee6350f81a9c9bba8998c8407"
+    }
+  ],
+  "fidelityNotes": "The published PDF is authoritative. Its Conclusion is preserved from the matching commented source version; typesetting adapter artifacts are reconciled with the PDF."
+}

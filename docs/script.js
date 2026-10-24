@@ -409,6 +409,10 @@ class MarkdownLoader {
                     if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT') {
                         return NodeFilter.FILTER_REJECT;
                     }
+                    // MathML and KaTeX require their generated markup to stay intact.
+                    if (parent.closest('math, .katex')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
                     if (parent.classList && parent.classList.contains('hover-b')) {
                         return NodeFilter.FILTER_REJECT;
                     }

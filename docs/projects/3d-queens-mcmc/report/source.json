@@ -1,0 +1,68 @@
+{
+  "repository": "https://github.com/renonesopocaj/3d-queens-mcmc",
+  "commit": "8d6669b4b5c3078718dd6d3e058641a85b64f303",
+  "originalPdf": "https://raw.githubusercontent.com/renonesopocaj/3d-queens-mcmc/8d6669b4b5c3078718dd6d3e058641a85b64f303/report/report.pdf",
+  "pdfSha256": "e31722e47883f9783cffc414244f88206b3a7b6b9e936e7ec57622f801d3328e",
+  "sourceArchive": "markov_chains__Copy_.zip",
+  "archiveSha256": "a3e2e99bc50eb8698c09af231f08d0367cdc38ebd86927ee5140588836324d00",
+  "pages": 6,
+  "figures": 5,
+  "imagePlacements": 15,
+  "mathExpressions": 282,
+  "reportTextSha256": "7cc16028cf9b43a4d4e4451019313b0a207292526506b3db8c201eb13cb7ef99",
+  "files": [
+    {
+      "path": "report/figures/energy-transform-comparison.png",
+      "sha256": "852f949478ee3bae4979be7053ca27df059bc91ef250772d76884307415db110"
+    },
+    {
+      "path": "report/figures/energy-log-high-beta.png",
+      "sha256": "09daec58abed6a845ec117b75a6f5cbfe2e72544ccf6289472ac3b9b51c72db8"
+    },
+    {
+      "path": "report/figures/solution-quadratic.png",
+      "sha256": "cc2c900c0745236346ef4cab432b4acc73f2c78e803f03e5b6dc362d0830439d"
+    },
+    {
+      "path": "report/figures/solution-linear.png",
+      "sha256": "614b38b5dd4bdfbcb714e62c04481e8ab5cb7d07ce65415aa95b4be7e68cc846"
+    },
+    {
+      "path": "report/figures/energy-n10.png",
+      "sha256": "1fce73d38af3ded718d5ae7d9a251f32c6280f527914fef653e9f5cf9ba92651"
+    },
+    {
+      "path": "report/figures/energy-n11.png",
+      "sha256": "28ca6e308169422f5160a3d4b1806c4229437b7e70113c1e7a66a57f53feca2d"
+    },
+    {
+      "path": "report/figures/constant-beta-comparison.png",
+      "sha256": "d5d7f8196c5298aff8c7b63348a5256ba944bc3d0f46c98bf888a2853b3dfb2c"
+    },
+    {
+      "path": "report/figures/energy-n4.png",
+      "sha256": "774bac00aeebda1b791584b844f940a074f292a931a3ca9ae21afd94f0df2dc8"
+    },
+    {
+      "path": "report/figures/energy-n5.png",
+      "sha256": "cded26d47ab2717166e1767a68184f8f0ab9f0ded6bcaea222033af326b40eb6"
+    },
+    {
+      "path": "report/figures/energy-n6.png",
+      "sha256": "fa221282b5c9b089a7509d0abd79f8c58c64761dfcdf7f196dc7285fde5d0d40"
+    },
+    {
+      "path": "report/figures/energy-n7.png",
+      "sha256": "86a96e8eb781b69272d7f455e312f90370068f31dead55a4e3c038a0e617c5e3"
+    },
+    {
+      "path": "report/figures/energy-n8.png",
+      "sha256": "2be4b2a94772dd69e142aae9991fd4ed0bf057227868a45e6c83fbd7aa835427"
+    },
+    {
+      "path": "report/figures/energy-n9.png",
+      "sha256": "4442940e82df1022e47b37656da61db6381a48edb0cc37d3b1003e21cf06485a"
+    }
+  ],
+  "fidelityNotes": "The supplied ZIP is an earlier draft. The final source was recovered verbatim from the pinned GitHub PDF and verified for all 3172 word tokens, numbers, mathematical symbols, punctuation, and all 15 original image placements. The title retains the original N squared superscript."
+}
