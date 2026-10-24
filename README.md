@@ -47,6 +47,12 @@ Because it's one shared engine, **images, video embeds, and LaTeX work the same 
 
 About, Projects, Blog, and Music are linked from every page's header. The three Markdown pages use matching `about-content`, `projects-content`, and `music-content` containers, and `MarkdownLoader` only loads content for containers present on the current page. Keep these headers in sync when updating navigation.
 
+## Music background photos
+
+Music uses a fixed 2×2 photo background with proportional cropping and a bottom-anchored crowd photo. Its `srcset` entries load compressed WebP copies from `docs/assets/music_pictures/optimized/`; `sizes` accounts for both the width and height needed by each crop. Original photos stay in `docs/assets/music_pictures/`. After replacing an original, run `node scripts/optimize-music-images.mjs` (requires `cwebp`, available in Homebrew's `webp` package) and keep `music.html`'s dimensions and source widths in sync. The generator preserves ICC color profiles and keeps Studio at its native maximum width.
+
+Measured with a fresh browser cache at desktop 1280×900 (1×), mobile 390×844 (2×), and desktop 1920×1080 (1×): responsive WebP reduces the four-photo download from 23,611,444 bytes to 375,914–509,958 bytes (about 98% smaller). Keep these responsive copies rather than serving the originals as backgrounds. Music's small text stroke increase stays scoped to `#music-content`.
+
 ## Project index and individual pages
 
 Research experience stays on `docs/projects.md`. Selected ML projects and Other projects use clickable previews that open `projects/<repository>/`. Each project directory contains its own `index.html` and `project.md`; the shared loader renders `project.md` into `project-content`. Full descriptions and GitHub links live on those individual pages, while the index shows a short excerpt.

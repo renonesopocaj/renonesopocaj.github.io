@@ -1,16 +1,17 @@
 ## Research experience
 
 - **Numerical Analysis for the $p$-Stokes problem**: work presented at [SIAM 
-Chapters Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/).
-- **Communication Efficient Decentralized Learning**: working on Decentralized Learning for LLM training, under 
-supervision of Arto Maranjyan (co-hosted by Volkan Cevher at the [LIONS lab](https://www.epfl.ch/labs/lions/)
-and Martin Jaggi at [MLO lab](https://www.epfl.ch/labs/mlo/)).
+Chapters Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/), under supervision of prof. M. Botti,
+[MOX Lab](https://mox.polimi.it/), Politecnico di Milano.
+- **Communication Efficient LLM Decentralized Training**: working on Decentralized Learning for LLM training, under 
+supervision of Arto Maranjyan (co-hosted by Volkan Cevher at the [LIONS Lab](https://www.epfl.ch/labs/lions/)
+and Martin Jaggi at [MLO Lab](https://www.epfl.ch/labs/mlo/)).
 - **[EPFL AI Team](https://epflaiteam.ch/) Student x [LEAP Lab](https://www.epfl.ch/labs/leap/)**: we're developing
 generative ML methods (diffusion models) for the inverse design of optical metasurfaces. Supervised by Mustafa Yucel, 
-Laboratory for Advanced Electromagnetics and Photonics.
+Laboratory for Advanced Electromagnetics and Photonics ([LEAP Lab](https://www.epfl.ch/labs/leap/)).
 - **Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases**: I studied inductive biases in GNNs for 
-learning the solution operator of a PDE with applications in structural mechanics. 
-Work conducted at [IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/), yet not publicly available.
+learning the solution operator of a PDE with applications in structural mechanics. Work conducted at
+[IMOS Lab, EPFL](https://www.epfl.ch/labs/imos/).
 
 ## Projects
 

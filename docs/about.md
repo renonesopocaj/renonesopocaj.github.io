@@ -21,7 +21,7 @@ I earned my Bachelor's degree in Computer Engineering from Politecnico di Milano
 
 Some highlights:
 - [Numerical Analysis for the $p$-Stokes problem](): work presented at [SIAM Chapters Meeting, PoliMi](https://polimi-siam-studentchapter.github.io/home/).
-- [Communication Efficient LLM Decentralized Learning](): research project under MLO Lab, EPFL.
+- [Communication Efficient LLM Decentralized Training](): research project under MLO Lab, EPFL.
 - [Generative ML methods (diffusion models) for the inverse design of optical metasurfaces](): research project under 
 LEAP Lab and EPFL AI Team.
 - [Physics-Informed ML, Graph Neural Networks (GNNs), and Inductive Biases](): research project under IMOS Lab, EPFL.
