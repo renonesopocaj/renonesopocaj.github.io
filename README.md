@@ -9,7 +9,11 @@ Personal site. Vanilla HTML/CSS/JS, no build step, no framework - based on the s
 ```
 docs/
   index.html          Home page: About + Publications sections, header/nav/theme toggle
-  about.md            About section content (TODO)
+  about.md            About section: profile, social links, and introduction
+  projects.html       Projects page with shared navigation and Markdown loading
+  projects.md         Current work, research experience, and selected/other projects
+  music.html          Music page with shared navigation and Markdown loading
+  music.md            Music section content
   publications.md     Publications section content (TODO)
   styles.css          All styling, incl. blog components and the font variables
   script.js           Site chrome (ES module) + the shared Markdown/math render pipeline
@@ -29,13 +33,15 @@ docs/
 
 ## How the markdown pipeline works
 
-`about.md`, `publications.md`, and every blog post are Markdown, fetched at runtime and rendered client-side (no build step). One shared engine does this everywhere - defined once in `docs/script.js` as `renderMarkdown()`, imported by `docs/blog/blog-post.js` for posts:
+`about.md`, `projects.md`, `music.md`, `publications.md`, and every blog post are Markdown, fetched at runtime and rendered client-side (no build step). One shared engine does this everywhere - defined once in `docs/script.js` as `renderMarkdown()`, imported by `docs/blog/blog-post.js` for posts:
 
 - **Engine:** [markdown-it](https://github.com/markdown-it/markdown-it), loaded from jsDelivr's ESM CDN (`markdown-it@14/+esm`), with `html: true` - meaning raw HTML in your `.md` files (like the social-link `<div>` in `about.md`) passes through untouched.
 - **Math:** [markdown-it-texmath](https://github.com/goessner/markdown-it-texmath) + [KaTeX](https://katex.org/), also via ESM CDN. Math is tokenized *before* markdown-it's backslash-escaping rule runs, so `\\` line breaks and `\{`/`\}` inside `$$...$$` blocks render correctly (this is why a naive "run KaTeX auto-render on the final HTML" approach isn't used - it breaks on exactly that case).
 - **Styling continuity:** markdown-it's default output doesn't carry this site's `.title` / `.cactus-link` classes, so `docs/script.js` overrides the `heading_open` and `link_open` renderer rules to re-inject them. If you change the Markdown engine or its config, check `.prose h1/h2` vs `.title` still look the same (see `docs/styles.css`).
 
-Because it's one shared engine, **images, video embeds, and LaTeX work the same way in `about.md` / `publications.md` as they do in blog posts.**
+Because it's one shared engine, **images, video embeds, and LaTeX work the same way in `about.md`, `projects.md`, `music.md`, and `publications.md` as they do in blog posts.**
+
+About, Projects, Blog, and Music are linked from every page's header. The three Markdown pages use matching `about-content`, `projects-content`, and `music-content` containers, and `MarkdownLoader` only loads content for containers present on the current page. Keep these headers in sync when updating navigation.
 
 ## Adding a blog post
 
@@ -68,11 +74,11 @@ The font is defined in exactly two places:
    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
    ```
    `--font-body` is used by `body` (i.e. all prose text); `--font-mono` is used by `.font-mono` and by code blocks/inline code in `.prose`. They're separate on purpose - you can swap the body font to something non-monospace without also changing how code looks. Edit these two lines to change the font(s) used across the whole site.
-2. **The Google Fonts `<link>`** in the `<head>` of each HTML page (`docs/index.html`, `docs/blog/index.html`, `docs/blog/post.html`) - currently:
+2. **The Google Fonts `<link>`** in the `<head>` of each HTML page (`docs/index.html`, `docs/projects.html`, `docs/music.html`, `docs/blog/index.html`, `docs/blog/post.html`) - currently:
    ```html
    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    ```
-   Replace the `family=` value with your chosen [Google Fonts](https://fonts.google.com/) family (or point at a different font host, or a self-hosted `@font-face`). This tag has to be updated in all three HTML files, since there's no shared header include in a build-free static site.
+   Replace the `family=` value with your chosen [Google Fonts](https://fonts.google.com/) family (or point at a different font host, or a self-hosted `@font-face`). This tag has to be updated in all five HTML files, since there's no shared header include in a build-free static site.
 
 ## Development
 

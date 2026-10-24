@@ -1,6 +1,6 @@
-// Markdown + math rendering engine, shared by the on-page sections (about/publications)
+// Markdown + math rendering engine, shared by the Markdown pages and sections
 // and the blog pages. Loaded lazily via ESM CDN imports so the site stays a
-// no-build static tree - see docs/README.md "How the markdown pipeline works".
+// no-build static tree - see README.md "How the markdown pipeline works".
 let mdEnginePromise = null;
 
 function loadMarkdownEngine() {
@@ -315,10 +315,10 @@ class LazyImageLoader {
     }
 }
 
-// Markdown content loader for the on-page sections (about, publications)
+// Markdown content loader for About, Projects, Music, and Publications.
 class MarkdownLoader {
     constructor() {
-        this.sections = ['about', 'publications'];
+        this.sections = ['about', 'projects', 'music', 'publications'];
         this.init();
     }
 
